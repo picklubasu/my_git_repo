@@ -19,8 +19,13 @@ package_application() {
 	sam package --template-file .aws-sam/build/template.yaml --kms-key-id alias/aws/s3 --s3-bucket ${S3_DEPLOY_BUCKET} --output-template-file ${TEMPLATE_PATH}
 }
 
+package_deploy() {
+	sam deploy --template-file ${CODEBUILD_SRC_DIR}/template.yml --stack-name MyFirstCodeBuild
+}
+
 echo "Starting build - $(date)"
 set -xe
 build_application
 package_application
+package_deploy
 echo "Completed build - $(date)"
