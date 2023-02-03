@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Test CloudFormation
+Parameters:
+    IAMRole:
+        Type: String
+        Default: 'arn:aws:iam::345814638087:role/IAM-LAMBDA-SERVICE'
+Resources:
+  cflambda:
+    Type: AWS::Lambda::Function
+    Properties:
+        FunctionName: abcd
+        Handler: lambda_function.lambda_handler
+        Runtime: python3.7
+        Role: 'arn:aws:iam::345814638087:role/IAM-LAMBDA-SERVICE'
+		Code:
+            ZipFile: |
+                import boto3
+                import json
+                import os
+        MemorySize: 10240
+        Timeout: 900
+        Description: Default Lambda
