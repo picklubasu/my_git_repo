@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "Starting pre_build - $(date)"
+set -xe
 STARTING_DIR=$PWD
 
 CONFIG_FOLDER = "$CODEBUILD_SRC_DIR/script"
