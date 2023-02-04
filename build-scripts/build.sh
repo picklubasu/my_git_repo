@@ -10,6 +10,10 @@
 #
 # Be sure your are logged in to AWS, as this script uploads to S3.
 
+delete_stack() {
+	sam delete --stack-name MyFirstCodeBuild
+}
+
 build_application() {
 	sam build --template-file ${TEMPLATE_PATH}
 }
