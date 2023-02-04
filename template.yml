@@ -17,5 +17,5 @@ Resources:
         S3Bucket: 's3-ftp-source'
         S3Key:  'code/thisistestlambdafunction.zip'
       MemorySize: 10240
-      Timeout: 900
+      Timeout: 300
       Description: Default Lambda
