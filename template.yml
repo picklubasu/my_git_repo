@@ -18,6 +18,7 @@ Resources:
           import boto3
           import json
           import os
+          import io
       MemorySize: 10240
       Timeout: 900
       Description: Default Lambda
