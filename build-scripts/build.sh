@@ -26,6 +26,6 @@ package_deploy() {
 echo "Starting build - $(date)"
 set -xe
 build_application
-package_application
-package_deploy
+#package_application
+#package_deploy
 echo "Completed build - $(date)"
