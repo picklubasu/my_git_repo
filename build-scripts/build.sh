@@ -10,10 +10,6 @@
 #
 # Be sure your are logged in to AWS, as this script uploads to S3.
 
-delete_stack() {
-	sam delete --stack-name MyFirstCodeBuild
-}
-
 build_application() {
 	sam build --template-file ${TEMPLATE_PATH}
 }
@@ -30,6 +26,6 @@ package_deploy() {
 echo "Starting build - $(date)"
 set -xe
 build_application
-#package_application
+package_application
 package_deploy
 echo "Completed build - $(date)"
