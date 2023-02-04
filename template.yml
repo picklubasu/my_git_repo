@@ -14,8 +14,8 @@ Resources:
       Runtime: python3.7
       Role: 'arn:aws:iam::345814638087:role/IAM-LAMBDA-SERVICE'
       Code:
-        ZipFile: |
-          import boto3
+        S3Bucket: 's3-ftp-source'
+        S3Key:  'code/thisistestlambdafunction.zip'
       MemorySize: 10240
       Timeout: 900
       Description: Default Lambda
